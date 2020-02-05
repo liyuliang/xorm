@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 type tagContext struct {

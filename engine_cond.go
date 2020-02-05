@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xormplus/builder"
-	"github.com/xormplus/core"
+	"github.com/liyuliang/builder"
+	"github.com/liyuliang/core"
 )
 
 func (engine *Engine) buildConds(table *core.Table, bean interface{},

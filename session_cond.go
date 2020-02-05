@@ -4,7 +4,7 @@
 
 package xorm
 
-import "github.com/xormplus/builder"
+import "github.com/liyuliang/builder"
 
 // Sql provides raw sql input parameter. When you have a complex SQL statement
 // and cannot use Where, Id, In and etc. Methods to describe, you can use SQL.

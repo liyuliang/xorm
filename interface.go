@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 // Interface defines the interface which Engine, EngineGroup and Session will implementate.

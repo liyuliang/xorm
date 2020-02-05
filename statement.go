@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/xormplus/builder"
-	"github.com/xormplus/core"
+	"github.com/liyuliang/builder"
+	"github.com/liyuliang/core"
 )
 
 // Statement save all the sql info for executing SQL

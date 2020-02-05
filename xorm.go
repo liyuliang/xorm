@@ -15,7 +15,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 const (

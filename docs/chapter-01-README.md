@@ -4,7 +4,7 @@
 ```go
 import (
     _ "github.com/go-sql-driver/mysql"
-    "github.com/xormplus/xorm"
+    "github.com/liyuliang/xorm"
 )
 
 var engine *xorm.Engine
@@ -18,7 +18,7 @@ or
 ```go
 import (
     _ "github.com/mattn/go-sqlite3"
-    "github.com/xormplus/xorm"
+    "github.com/liyuliang/xorm"
 )
 
 var engine *xorm.Engine
@@ -34,7 +34,7 @@ func main() {
 ```go
 import (
     _ "github.com/lib/pq"
-	"github.com/xormplus/xorm"
+	"github.com/liyuliang/xorm"
 )
 
 var engine *xorm.Engine
@@ -48,7 +48,7 @@ or
 ```go
 import (
     _ "github.com/go-sql-driver/mysql"
-    "github.com/xormplus/xorm"
+    "github.com/liyuliang/xorm"
 )
 
 var engine *xorm.Engine

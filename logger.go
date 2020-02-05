@@ -9,7 +9,7 @@ import (
 	"io"
 	"log"
 
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 // default log options

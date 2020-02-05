@@ -6,7 +6,7 @@ import (
 
 	"github.com/jackc/pgx/stdlib"
 	"github.com/stretchr/testify/assert"
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 func TestParsePostgres(t *testing.T) {

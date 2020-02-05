@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 // tbNameWithSchema will automatically add schema prefix on table name

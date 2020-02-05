@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"github.com/Chronokeeper/anyxml"
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 type Record map[string]Value

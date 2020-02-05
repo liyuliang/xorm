@@ -21,8 +21,8 @@ import (
 	"time"
 
 	"github.com/fsnotify/fsnotify"
-	"github.com/xormplus/builder"
-	"github.com/xormplus/core"
+	"github.com/liyuliang/builder"
+	"github.com/liyuliang/core"
 )
 
 // Engine is the major struct of xorm, it means a database manager.

@@ -3,7 +3,7 @@ package xorm
 import (
 	"sync"
 
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 const (

@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/xormplus/core"
+	"github.com/liyuliang/core"
 )
 
 // Rows rows wrapper a rows to

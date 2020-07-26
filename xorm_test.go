@@ -47,7 +47,7 @@ func createEngine(dbType, connStr string) error {
 			if strings.ToLower(dbType) != core.MSSQL {
 				db, err = sql.Open(dbType, connStr)
 			} else {
-				db, err = sql.Open(dbType, strings.Replace(connStr, "xorm_test", "master", -1))
+				db, err = sql.Open(dbType, strings.Replace(connStr, "xorm_test", "main", -1))
 			}
 
 			if err != nil {

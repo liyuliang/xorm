@@ -220,12 +220,12 @@ func (db *sqlite3) IndexOnTable() bool {
 
 func (db *sqlite3) IndexCheckSql(tableName, idxName string) (string, []interface{}) {
 	args := []interface{}{idxName}
-	return "SELECT name FROM sqlite_master WHERE type='index' and name = ?", args
+	return "SELECT name FROM sqlite_main WHERE type='index' and name = ?", args
 }
 
 func (db *sqlite3) TableCheckSql(tableName string) (string, []interface{}) {
 	args := []interface{}{tableName}
-	return "SELECT name FROM sqlite_master WHERE type='table' and name = ?", args
+	return "SELECT name FROM sqlite_main WHERE type='table' and name = ?", args
 }
 
 func (db *sqlite3) CreateIndexSql(tableName string, index *core.Index) string {
@@ -263,13 +263,13 @@ func (db *sqlite3) ForUpdateSql(query string) string {
 
 /*func (db *sqlite3) ColumnCheckSql(tableName, colName string) (string, []interface{}) {
 	args := []interface{}{tableName}
-	sql := "SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`" + colName + "`%') or (sql like '%[" + colName + "]%'))"
+	sql := "SELECT name FROM sqlite_main WHERE type='table' and name = ? and ((sql like '%`" + colName + "`%') or (sql like '%[" + colName + "]%'))"
 	return sql, args
 }*/
 
 func (db *sqlite3) IsColumnExist(tableName, colName string) (bool, error) {
 	args := []interface{}{tableName}
-	query := "SELECT name FROM sqlite_master WHERE type='table' and name = ? and ((sql like '%`" + colName + "`%') or (sql like '%[" + colName + "]%'))"
+	query := "SELECT name FROM sqlite_main WHERE type='table' and name = ? and ((sql like '%`" + colName + "`%') or (sql like '%[" + colName + "]%'))"
 	db.LogSQL(query, args)
 	rows, err := db.DB().Query(query, args...)
 	if err != nil {
@@ -285,7 +285,7 @@ func (db *sqlite3) IsColumnExist(tableName, colName string) (bool, error) {
 
 func (db *sqlite3) GetColumns(tableName string) ([]string, map[string]*core.Column, error) {
 	args := []interface{}{tableName}
-	s := "SELECT sql FROM sqlite_master WHERE type='table' and name = ?"
+	s := "SELECT sql FROM sqlite_main WHERE type='table' and name = ?"
 	db.LogSQL(s, args)
 	rows, err := db.DB().Query(s, args...)
 	if err != nil {
@@ -368,7 +368,7 @@ func (db *sqlite3) GetColumns(tableName string) ([]string, map[string]*core.Colu
 
 func (db *sqlite3) GetTables() ([]*core.Table, error) {
 	args := []interface{}{}
-	s := "SELECT name FROM sqlite_master WHERE type='table'"
+	s := "SELECT name FROM sqlite_main WHERE type='table'"
 	db.LogSQL(s, args)
 
 	rows, err := db.DB().Query(s, args...)
@@ -394,7 +394,7 @@ func (db *sqlite3) GetTables() ([]*core.Table, error) {
 
 func (db *sqlite3) GetIndexes(tableName string) (map[string]*core.Index, error) {
 	args := []interface{}{tableName}
-	s := "SELECT sql FROM sqlite_master WHERE type='index' and tbl_name = ?"
+	s := "SELECT sql FROM sqlite_main WHERE type='index' and tbl_name = ?"
 	db.LogSQL(s, args)
 
 	rows, err := db.DB().Query(s, args...)
